@@ -4,7 +4,7 @@ A custom element to include content in the document only after consent is given.
 
 No build, no dependencies, no styles, no shadow dom. Just a bog standard button and your content.
 
-![&lt;consent-&gt; gets "given" attribute, button gets "hidden" attribute and "Here be spoilers" text shows up after &lt;template&gt;](upgrade.gif)
+![&lt;consent-&gt; gets "given" attribute, button gets "hidden" attribute and "Here be spoilers" text shows up after &lt;template&gt;](consent.gif)
 
 Inspired by [Social Media Widgets and Privacy](https://alvaromontoro.com/blog/68076/social-media-widgets-and-privacy) by Alvaro Montoro.
 
