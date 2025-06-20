@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script type="module">
+    import { ConsentElement } from './consent-element.js'
+    customElements.define('consent-', ConsentElement)
+  </script>
+</head>
+<body>
+  <h1>Consent custom element</h1>
+
+  <consent->
+    <button>Show spoiler</button>
+    <template>
+      Here be the spoiler.
+    </template>
+  </consent->
+
+  <consent->
+    <button>Show social media widget</button>
+    <template>
+      Potential privacy breaking widget here.
+    </template>
+  </consent->
+
+</body>
+</html>
