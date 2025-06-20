@@ -10,20 +10,33 @@
   </script>
 </head>
 <body>
-  <h1>Consent custom element</h1>
+  <h1>Consent custom element example usage</h1>
 
-  <consent->
-    <button>Show spoiler</button>
-    <template>
-      Here be the spoiler.
-    </template>
-  </consent->
+  <h2>Simple markup</h2>
+  <p>
+    <consent->
+      <button>Show spoiler</button>
+      <template>
+        Here be the spoiler.
+      </template>
+    </consent->
+  </p>
 
+  <h2>Use any markup, as long as you have a button and a template</h2>
   <consent->
-    <button>Show social media widget</button>
-    <template>
-      Potential privacy breaking widget here.
-    </template>
+    <p>
+      I didn't want to include some widget here, but loading a font from google is pretty analogous in principle.
+    </p>
+    <p>
+      <button>Load google font</button>
+    </p>
+    <p>
+      <template>
+        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+        <style>body {font-family: "Caprasimo", serif;}</style>
+        Fontastic!
+      </template>
+    </p>
   </consent->
 
 </body>
