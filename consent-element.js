@@ -1,12 +1,12 @@
 export class ConsentElement extends HTMLElement {
   static observedAttributes = ['given']
-  #given = false
 
+  constructor() {super()}
+
+  #given = false
   get given() {
     return this.#given
   }
-
-  constructor() {super()}
 
   handleClick = event => {
     if (this.getAttribute('given') !== null) return
@@ -19,8 +19,10 @@ export class ConsentElement extends HTMLElement {
 
   consent() {
     const template = this.querySelector('template')
-    template.after(template.content.cloneNode(true))
-    this.querySelector('button').hidden = true
+    const button = this.querySelector('button')
+
+    template?.after(template.content.cloneNode(true))
+    if (button) button.hidden = true;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -30,9 +32,9 @@ export class ConsentElement extends HTMLElement {
     }
   }
   connectedCallback() {
-    this.addEventListener('click', this.handleClick, {once: true})
+    this.addEventListener('click', this.handleClick)
   }
   disconnectedCallback() {
-    this.removeEventListener('click', this.handleClick, {once: true})
+    this.removeEventListener('click', this.handleClick)
   }
 }
